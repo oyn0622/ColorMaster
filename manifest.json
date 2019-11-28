@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Color Master",
+  "version": "1.0.0",
+  "sidebar_action": {
+    "default_page": "sidebar.js",
+    "default_icon": {
+      "16": "Color_Master.png"
+    },
+    "default_page": "index.html",
+    "default_title": "사이드바앱",
+    "use_navigation_bar": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "http://*/*", "https://*/*"]
+}
